@@ -1,12 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
 <head>
-
 <title>ОСА</title>
 <style>
-
-
 #player_2 {
 position: absolute;
 	top: 50%;
@@ -14,26 +9,23 @@ position: absolute;
 	border: 4px double black;
     background: #FFFFFF; 
     padding: 10px; 
-	
 }
 
 #player_1 {
 position: absolute;
-	
 	bottom: 2%;
 	left: 50%;
-		border: 4px double black;
+	border: 4px double black;
     background: #FFFFFF; 
     padding: 10px; 
 	
 }
 
-
 #player_3 {
 position: absolute;
 	top: 2%;
 	left: 50%;
-		border: 4px double black;
+	border: 4px double black;
     background: #FFFFFF; 
     padding: 10px; 
 	
@@ -43,50 +35,60 @@ position: absolute;
 position: absolute;
 	top: 50%;
 	right: 2%;
-		border: 4px double black;
+	border: 4px double black;
     background: #FFFFFF; 
-    padding: 10px; 
-	
+    padding: 10px; 	
 }
+
 #state_auction{
 position: absolute;
-top: 2%;
+	top: 2%;
 	left: 2%;
-		border: 2px solid black;
+	border: 2px solid black;
     background: #FFFFFF; 
     padding: 10px;
 }
+
 #bet{
 position: absolute;
-top: 52%;
+	top: 52%;
 	left: 52%;
 }
+
 #make{
 position: absolute;
-top: 60%;
+	top: 60%;
 	left: 56%;
-
 }
+
 #pas{
 position: absolute;
-top: 60%;
+	top: 60%;
 	left: 52%;
+}
 
+#form{
+position: absolute;
+	top: 52%;
+	left: 52%;
+	border: 2px solid black;
+    background: #FFFFFF; 
+    padding: 10px
 }
 </style>
-
 </head>
 
 <body bgcolor = "#009933">
-
 <div id = "player_1">
 Игрок 1<p>
 Ставка: 1250 руб.
 </div>
+
 <div id = "player_2">
 Игрок 2<p>
 Ставка: 1250 руб.
 </div>
+
 <div id = "player_3">
 Игрок 3<p>
 Ставка: 1250 руб.
@@ -96,17 +98,18 @@ top: 60%;
 Ставка: 1250 руб.
 </div>
 
-
-
 <div id ="state_auction">
 1-й лот <p>
 Шаг ставки: 120 руб.<p>
 Стартовая цена: 500 руб. <p>
 </div>
 
-<input id = "bet"/>
-<input id = "make" type = "submit" value = "Поставить"/>
-<input id = "pas" type = "submit" value = "Пас"	>
+<form id = "form">
+<input  type = "number" autofocus required max = 1000000000>
+<input  type = "submit" value = "Поставить"/>
+<input type = "button" value = "Пас"	>
+
+</form>
 </body>
 
 </html>
