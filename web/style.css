@@ -1,0 +1,69 @@
+body {
+	background: #009933;
+}
+
+#player_2 {
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	border: 4px double black;
+    background: #FFFFFF; 
+    padding: 10px; 
+	
+}
+
+#player_1 {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	border: 4px double black;
+    background: #FFFFFF; 
+    padding: 10px; 
+	
+}
+
+
+#player_3 {
+position: absolute;
+	top: 2%;
+	left: 50%;
+	border: 4px double black;
+    background: #FFFFFF; 
+    padding: 10px; 
+	
+}
+
+#player_4 {
+	position: absolute;
+	top: 50%;
+	right: 2%;
+	border: 4px double black;
+    background: #FFFFFF; 
+    padding: 10px; 
+	
+}
+#state_auction{
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	border: 2px solid black;
+    background: #FFFFFF; 
+    padding: 10px;
+}
+#bet{
+	position: absolute;
+	top: 52%;
+	left: 52%;
+}
+#bet{
+	position: absolute;
+	top: 60%;
+	left: 56%;
+
+}
+#pas{
+	position: absolute;
+	top: 60%;
+	left: 52%;
+
+}
