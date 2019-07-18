@@ -26,13 +26,13 @@ class Upd:
 class Bot:
     def __init__(self, token):
         self.updater = Updater(token)
- 
+
         self.updater.dispatcher.add_error_handler(self._Exc)
 
         self.updater.dispatcher.add_handler(CallbackQueryHandler(self._CallBackQueryHandler))
         self.updater.dispatcher.add_handler(MessageHandler(Filters.text, self._MessageHandler))
         self.updater.dispatcher.add_handler(MessageHandler(Filters.command, self._CommandHandler))
-        
+
     def Run(self):
         self.updater.start_polling()
 
@@ -49,12 +49,12 @@ class Bot:
             #update.message.reply_text("Хей, привет.", reply_markup = ReplyKeyboardMarkup(DefaultKeyboard, True, True))
             update.message.reply_text("Хей, привет.", reply_markup = InlineKeyboardMarkup(DefaultKeyboard_))
 
-            
+
         elif args[0] == '/startGame':
             update.message.reply_text("WORK!!")
         else:
             self._Help(update)
-    
+
     def _MessageHandler(self, bot, update):
         print(update)
 
@@ -70,5 +70,6 @@ class Bot:
 import logging
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    
-Bot('916235662:AAHUBlwxcXe-xGT9Twr1KLWct4N_Aekej4M').Run()
+
+with open('token', 'r', encoding='utf-8') as f:
+    Bot(f.read()[:-1]).Run()
