@@ -55,7 +55,7 @@ position: absolute;
 	top: 52%;
 	left: 52%;
 }
-#bet{
+#make{
 	position: absolute;
 	top: 60%;
 	left: 56%;
@@ -66,4 +66,12 @@ position: absolute;
 	top: 60%;
 	left: 52%;
 
+}
+#form{
+position: absolute;
+	top: 40%;
+	left: 40%;
+	border: 2px solid black;
+    background: #FFFFFF; 
+    padding: 10px
 }
