@@ -13,7 +13,9 @@ class Room:
         return len(self.users_array)
 
     def next_step(self):
-        self.player_bet(self.users_array[0].step())
+        boolean, cost = self.users_array[0].step(self.current_cost)
+        self.current_cost = cost if boolean else self.current_cost
+        self.player_bet(boolean)
 
     def player_bet(self, boolean_var):
         if boolean_var:
@@ -26,11 +28,10 @@ class Room:
             self.next_step()
 
     def send_step(self):
-        self.users_array.get_min_value(self.auc_step)
+        self.users_array.set_min_value(self.auc_step)
 
     def end_game(self):
         return self.users_array.get_winner()
-
 
 
 class User:
@@ -40,12 +41,18 @@ class User:
         self.money = money
         self.min_value = 10
 
-    def step(self):
-        a = self.get_bet()
-        # TODO check bet
+    def step(self, current_cost):
+        value = self.get_bet()
+        c = self.check_bet(current_cost, self.min_value, value)
+        return c, c * value
+
+    @staticmethod
+    def check_bet(current_cost, min_step, value):
+        return value >= current_cost + min_step
 
     def get_bet(self):
         # TODO: get value by input
+        return int(input())
 
     def set_min_value(self, value):
         self.min_value = value
@@ -64,9 +71,10 @@ class PlayerChain:
     def get_len(self):
         return len(self.array)
 
-    def get_min_value(self, value):
+    def set_min_value(self, value):
         for i in self.array:
             i.set_min_value(value)
 
     def get_winner(self):
         return self.array[0]
+
