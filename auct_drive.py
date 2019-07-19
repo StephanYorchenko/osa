@@ -1,7 +1,7 @@
 class Player:
     count = 0
     ids = 0
-    list = {}
+    lisOfClass = {}
 
     def __init__(self):
         self.name = input('Enter your name: ')
@@ -12,7 +12,7 @@ class Player:
         Player.count += 1
         Player.ids += 1
         self.id = Player.ids
-        Player.list[self.id] = self
+        Player.lisOfClass[self.id] = self
 
     def make_a_bet(self, min_bet):
         bet = int(input('Make ur bet (from {}): '.format(min_bet)))
@@ -24,17 +24,17 @@ class Player:
     def win_a_round(self):
         self.coins -= self.bet
         self.bet = 0
-        self.items.append(Auction.list[self.auc_id].pop(0))
+        self.items.append(Auction.lisOfClass[self.auc_id].pop(0))
 
     def __del__(self):
         Player.count -= 1
-        Player.list.pop(self.id)
+        Player.lisOfClass.pop(self.id)
 
 
 class Auction:
     count = 0
     ids = 0
-    list = {}
+    lisOfClass = {}
 
     def __init__(self):
         Auction.count += 1
@@ -43,10 +43,10 @@ class Auction:
         self.items = []  #
         self.players = []
         self.step = 10
-        Auction.list[self.id] = self
+        Auction.lisOfClass[self.id] = self
 
     def join(self, pl_id):
-        self.players.append(Player.list[pl_id])
+        self.players.append(Player.lisOfClass[pl_id])
         self.players[-1].auc_id = self.id
 
     def pop(self):
@@ -69,7 +69,7 @@ class Auction:
 
     def __del__(self):
         Auction.count -= 1
-        Auction.list.pop(self.id)
+        Auction.lisOfClass.pop(self.id)
 
 
 if __name__ == '__main__':
