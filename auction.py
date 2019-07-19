@@ -8,6 +8,7 @@ class Room:
         self.users_array = array_users
         self.auc_step = auc_step
         self.current_cost = min_cost
+        self.send_step()
 
     def get_number_players(self):
         return len(self.users_array)
@@ -35,14 +36,14 @@ class Room:
 
 
 class User:
-    def __init__(self, name, money, id):
+    def __init__(self, name, id, money=1000):
         self.id = id
         self.name = name
         self.money = money
         self.min_value = 10
 
     def step(self, current_cost):
-        value = self.get_bet()
+        value = self.get_bet(current_cost)
         c = self.check_bet(current_cost, self.min_value, value)
         return c, c * value
 
@@ -50,9 +51,10 @@ class User:
     def check_bet(current_cost, min_step, value):
         return value >= current_cost + min_step
 
-    def get_bet(self):
+    def get_bet(self, cc):
         # TODO: get value by input
-        return int(input())
+        # thi is kostyl for testing
+        return int(input(f'bet {self.name} current {cc}'))
 
     def set_min_value(self, value):
         self.min_value = value
@@ -78,3 +80,14 @@ class PlayerChain:
     def get_winner(self):
         return self.array[0]
 
+    def __getitem__(self, item):
+        return self.array[item]
+
+
+if __name__ == '__main__':
+    pc = PlayerChain([User('name1', '12345'),
+                      User('name2', '23456'),
+                      User('name3', '34567'),
+                      User('name4', '45678')])
+    room = Room(pc)
+    room.next_step()
