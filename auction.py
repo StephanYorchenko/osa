@@ -4,6 +4,7 @@ class Room:
         Initialisation of room
         :param array_users: PlayerChain()
         :param auc_step: minimal value of bet
+        :param min_cost: starting cost of lot
         """
         self.users_array = array_users
         self.auc_step = auc_step
@@ -62,6 +63,10 @@ class User:
 
 class PlayerChain:
     def __init__(self, array_users):
+        """
+        Data-structure for looking for users
+        :param array_users: list with len == 4 of User()
+        """
         self.array = array_users
 
     def append(self):
