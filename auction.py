@@ -55,7 +55,7 @@ class User:
     def get_bet(self, cc):
         # TODO: get value by input
         # thi is kostyl for testing
-        return int(input(f'bet {self.name} current {cc}'))
+        return int(input(f'bet {self.name} current {cc} '))
 
     def set_min_value(self, value):
         self.min_value = value
