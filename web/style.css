@@ -3,12 +3,17 @@ body {
 }
 
 #player_2 {
+	  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 	position: absolute;
 	top: 50%;
 	left: 2%;
-	border: 4px double black;
-    background: #FFFFFF; 
-    padding: 10px; 
+	
+	 
 	
 }
 
@@ -16,10 +21,12 @@ body {
 	position: absolute;
 	bottom: 2%;
 	left: 50%;
-	border: 4px double black;
-    background: #FFFFFF; 
-    padding: 10px; 
-	
+  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 
 
@@ -27,9 +34,12 @@ body {
 position: absolute;
 	top: 2%;
 	left: 50%;
-	border: 4px double black;
-    background: #FFFFFF; 
-    padding: 10px; 
+	  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 	
 }
 
@@ -37,47 +47,73 @@ position: absolute;
 	position: absolute;
 	top: 50%;
 	right: 2%;
-	border: 4px double black;
-    background: #FFFFFF; 
-    padding: 10px; 
-	
+  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 #state_auction{
 	position: absolute;
 	top: 2%;
 	left: 2%;
-	border: 2px solid black;
-    background: #FFFFFF; 
-    padding: 10px;
+	  padding:5px 15px; 
+    background:#ccc; 
+    border:1;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 #bet{
 	position: absolute;
-	top: 52%;
-	left: 52%;
+	top: 50%;
+	left: 50%;
+	
 }
 #make{
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 56%;
 
 }
 #pas{
 	position: absolute;
-	top: 60%;
-	left: 52%;
+	top: 55%;
+	left: 50%;
 
 }
 #form{
+	  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 position: absolute;
-	top: 40%;
-	left: 40%;
-	border: 2px solid black;
-    background: #FFFFFF; 
-    padding: 10px
+	top: 50%;
+	left: 50%;
+	
 }
 
 #exit{
+	  padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 position: absolute;
 	top: 2%;
 	right: 2%;
+}
+
+
+input {
+    padding:5px 15px; 
+    background:#ccc; 
+    border: 1px solid;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
